@@ -1,4 +1,5 @@
 Diary::Application.routes.draw do
+  resources "entries"
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

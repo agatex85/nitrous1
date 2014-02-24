@@ -1,0 +1,12 @@
+<h1>My Rails Girls Diary</h1>
+      <style>
+h1 {color:blue;}
+</style>
+    <div>
+      <%@entries.each do |e|%>
+         <h2><%= link_to(e.title, entry_path(e)) %></h2>   
+      <h4><%= link_to("destroy",e,method: :delete) %></h4>
+        <h4><%= link_to("edit", edit_entry_path(e)) %></h4>  
+      <%end%>
+         <h2><%= link_to("new", new_entry_path) %></h2>    
+        </div>

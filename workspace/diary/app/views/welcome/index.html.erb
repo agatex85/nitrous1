@@ -21,10 +21,14 @@
     </div>
     <div>
       <h1>My favourite websites</h1>
-      <ol>
-        <li><a href="http://railsgirls.com">Rails Girls</a></li>
-        <li><a href="https://en.wikibooks.org/wiki/Ruby_Programming">Wikibooks</a></li>
-        <li><a href="http://guides.rubyonrails.org">Ruby on Rails Guides</a></li>
+      <ol> 
+        <%@websites = [["http://railsgirls.com", "railsgirls"],
+        ["https://en.wikibooks.org/wiki/Ruby_Programming", "Wiki"],
+        ["http://guides.rubyonrails.org", "Guides" ]]%>
+        
+        <% for url, name in @websites %>
+        <li><a href="<%= url %>"><%= name %></a></li>
+      <% end %>
       </ol>
     </div>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSffYX07BJY8meLWtqbI1UZyHCzinMeHvmajx-8d1365K3cxxy0vVab0p" alt= piggy/>
